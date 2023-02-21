@@ -27,19 +27,6 @@ public class LarkClient {
     @Value("${lark.verificationToken}")
     private String verificationToken;
 
-    @PostConstruct
-    public void LarkClient(){
-        log.info(encryptKey);
-        log.info(verificationToken);
-    }
-
-    public String getEncryptKey() {
-        return encryptKey;
-    }
-
-    public String getVerificationToken() {
-        return verificationToken;
-    }
     public String calculateSignature(String timestamp, String nonce, String bodyString) throws NoSuchAlgorithmException {
         StringBuilder content = new StringBuilder();
         content.append(timestamp).append(nonce).append(encryptKey).append(bodyString);
