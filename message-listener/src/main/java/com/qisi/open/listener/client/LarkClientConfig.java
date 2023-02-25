@@ -21,7 +21,7 @@ import java.util.Base64;
  */
 @Slf4j
 @Service
-public class LarkClient {
+public class LarkClientConfig {
     @Value("${lark.encryptKey}")
     private String encryptKey;
     @Value("${lark.verificationToken}")

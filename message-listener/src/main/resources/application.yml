@@ -3,4 +3,7 @@ server:
 
 spring:
   profiles:
-    include: passwd
+    active: dev
+    group:
+      "dev": passwd
+
